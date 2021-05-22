@@ -40,7 +40,7 @@ var (
 	cores          = runtime.NumCPU()
 	rx_old         = 0
 	tx_old         = 0
-    keys           = []string{"rx", "tx", "brightness", "volume", "temp", "battery", "cpu", "ram", "calendar", "clock"}
+    keys           = []string{"cpu", "calendar", "clock"}
 	colors         = []DwmColor{{"\x06", "\x07"}, {"\x08", "\x09"}, {"\x0a", "\x0b"}, {"\x0c", "\x0d"}, {"\x0e", "\x0f"}, {"\x10", "\x11"}}
 //	colors             = []DwmColor{{"\x0a", "\x0b"}, {"\x0b", "\x0a"}}
 	valid_net_device   = false

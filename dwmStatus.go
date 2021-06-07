@@ -40,7 +40,7 @@ var (
 	cores          = runtime.NumCPU()
 	rx_old         = 0
 	tx_old         = 0
-    keys           = []string{"cpu", "calendar", "clock"}
+    keys           = []string{"calendar"}
 	colors         = []DwmColor{{"\x06", "\x07"}, {"\x08", "\x09"}, {"\x0a", "\x0b"}, {"\x0c", "\x0d"}, {"\x0e", "\x0f"}, {"\x10", "\x11"}}
 //	colors             = []DwmColor{{"\x0a", "\x0b"}, {"\x0b", "\x0a"}}
 	valid_net_device   = false
@@ -112,7 +112,7 @@ func remove_key(key string) {
 
 func collect_date(key string) {
 	t := time.Now()
-	collected_data[key] = fmt.Sprintf("%s %s", icons[key], t.Format("Mon Jan _2"))
+	collected_data[key] = fmt.Sprintf("%s %s", icons[key], t.Format("Mon Jan 02 15:04:05 2006"))
 }
 
 func collect_time(key string) {
